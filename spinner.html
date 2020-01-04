@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+body{
+    background: #000;
+    display: flex;
+    justify-content: center;
+   
+}
+.contenedor{
+    margin-top: 120px;
+    height: 400px;
+    width: 400px;
+    perspective: 1000px;
+}
+    
+    .conte-hijo{
+        transform-style: preserve-3d;
+        height: 100%;
+        width: 100%;
+        animation: rotar 8s infinite linear;
+    }
+.box{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 5px solid #ffff;
+  border-radius: 50%;
+}
+.box:nth-child(1){
+    transform: rotateY(0deg) translateZ(0)
+}
+.box:nth-child(2){
+    transform: rotateY(50deg) translateZ(0)
+}
+.box:nth-child(3){
+    transform: rotateY(100deg) translateZ(0)
+}
+.box:nth-child(4){
+    transform: rotateY(150deg) translateZ(0)
+}
+.box:nth-child(5){
+    transform: rotateY(200deg) translateZ(0)
+}
+.box:nth-child(6){
+    transform: rotateY(250deg) translateZ(0)
+}
+.box:nth-child(7){
+    transform: rotateY(300deg) translateZ(0)
+}
+.box:nth-child(8){
+    transform: rotateY(350deg) translateZ(0)
+}
+.box:nth-child(9){
+    transform: rotateY(400deg) translateZ(0)
+}
+
+@keyframes rotar{
+   to{
+      transform: rotateY(360deg) rotateX(360deg) 
+    }
+}
+    </style>
+</head>
+<body>
+    
+    <div class="contenedor">
+        <div class="conte-hijo">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+   
+</body>
+</html>
